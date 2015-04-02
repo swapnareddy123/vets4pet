@@ -1,7 +1,7 @@
 class Appointment < ActiveRecord::Base
   belongs_to :vet
 
-  validates :vet_id, :presence => true
+  validates :vet_id, :customer, :pet , :presence => true
   validates :reason, :presence => true
   validate :not_past_date
 
